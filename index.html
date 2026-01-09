@@ -120,7 +120,13 @@
 
         const email = document.getElementById('email').value;
         const password = document.getElementById('password').value;
+        <input type="email" class="form-control" id="email" required 
+       placeholder="user@company.com" 
+       value="suchanaree.kongp@gmail.com">
 
+      <input type="password" class="form-control" id="password" required 
+       placeholder="Enter password" 
+       value="67542">
         google.script.run
           .withSuccessHandler(response => {
             if (response.success) {
