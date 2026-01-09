@@ -53,7 +53,9 @@
             <label class="form-label">Email Address</label>
             <div class="input-group">
               <span class="input-group-text"><i class="fas fa-envelope"></i></span>
-              <input type="email" class="form-control" id="email" required placeholder="user@company.com">
+              <input type="email" class="form-control" id="email" required 
+                     placeholder="user@company.com"
+                     value="suchanaree.kongp@gmail.com">
             </div>
           </div>
           
@@ -61,7 +63,9 @@
             <label class="form-label">Password</label>
             <div class="input-group">
               <span class="input-group-text"><i class="fas fa-key"></i></span>
-              <input type="password" class="form-control" id="password" required placeholder="Enter password">
+              <input type="password" class="form-control" id="password" required 
+                     placeholder="Enter password"
+                     value="67542">
             </div>
           </div>
 
@@ -120,13 +124,9 @@
 
         const email = document.getElementById('email').value;
         const password = document.getElementById('password').value;
-        <input type="email" class="form-control" id="email" required 
-       placeholder="user@company.com" 
-       value="suchanaree.kongp@gmail.com">
+        
+        // *** แก้ไขจุดที่ 3: ลบ input ที่เกินมาตรงนี้ออกไปแล้ว ***
 
-      <input type="password" class="form-control" id="password" required 
-       placeholder="Enter password" 
-       value="67542">
         google.script.run
           .withSuccessHandler(response => {
             if (response.success) {
@@ -159,9 +159,6 @@
         document.getElementById('userNameDisplay').innerText = currentUser.name;
         document.getElementById('userRoleDisplay').innerText = currentUser.role;
         document.getElementById('welcomeRole').innerText = currentUser.role;
-
-        // ตรงนี้สามารถเรียกฟังก์ชันโหลดข้อมูลตาม Role ต่อได้เลย
-        // เช่น if(currentUser.role === 'HR') loadHRDashboard();
       }
 
       function handleLogout() {
